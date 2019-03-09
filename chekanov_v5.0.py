@@ -2,6 +2,8 @@ import pygame
 import random
 import time
 
+#123
+
 pygame.init()
 
 screen = pygame.display.set_mode([800,720])

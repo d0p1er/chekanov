@@ -12,7 +12,7 @@ This is my first game written in pygame ( python ).
 
 It's dedicated to a wonderful teacher and person, Dmitry Alexandrovich Chekanov. That's why the game is called chekanov.
 
-| ![chekanov left](image/chekanov%20left.png) | ![chekanov front](image/chekanov%20front.png) | ![chekanov right](image/chekanov%20right.png) |
+![chekanov left](image/chekanov%20left.png) ![chekanov front](image/chekanov%20front.png) ![chekanov right](image/chekanov%20right.png)
 
 <a name="gameplay"></a>
 ## 2. Gameplay

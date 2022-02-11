@@ -42,6 +42,13 @@ If you are drunk, points are doubled.
 
 As well you can't skip meat skewers because meat is life.
 
+![main menu](image/main%20menu.png "Main menu. P.s. Settings don't work :pensive:")
+
+![gameplay](image/gameplay.png "Gameplay")
+
+![Game over](image/game%20over2.png "Game over")
+
+
 <a name="conc"></a>
 ## 3. Conclusion
 

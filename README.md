@@ -18,13 +18,12 @@ It's dedicated to a wonderful teacher and person, Dmitry Alexandrovich Chekanov.
 <a name="gameplay"></a>
 ## 2. Gameplay
 
-a - run to the left.
-
-d - run to the right.
-
-space - jump.
-
-escape - exit the game.
+| button | action            |
+| ------ | ----------------- |
+| a      | run to the left.  |
+| d      | run to the right. |
+| space  | jump.             |
+| escape | exit the game.    |
 
 
 The main task of the game is to collect skewers with meat and dodge empty skewers. If you collect an empty skewer, you will lose. :pensive: :dizzy_face:

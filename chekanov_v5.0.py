@@ -18,9 +18,9 @@ check_beer = False
 game_over = False
 check_game_over = False
 game_start = 0
-# doing_jump = False
+doing_jump = False
 
-# to = 1
+to = 1
 counter = 1
 timer = 3
 T = time.time()
@@ -88,8 +88,8 @@ class Chekanov:
 		if (self.x > 800):
 			self.x = -80
 
-	# def jump(self, t):
-	# 	self.y = 640 - 333*(time.time() - t) + 444*pow(time.time() - t, 2)
+	def jump(self, t):
+		self.y = 640 - 333*(time.time() - t) + 444*pow(time.time() - t, 2)
 
 	def draw_left(self):
 		self.screen.blit(pic_chekanov_left, (self.x, self.y))
@@ -236,9 +236,9 @@ while keep_going:
 			if (event.key == pygame.K_ESCAPE):
 				keep_going = False
 
-		# if (event.type == pygame.KEYDOWN):
-		# 	if (event.key == pygame.K_SPACE):
-		# 		doing_jump = True
+		if (event.type == pygame.KEYDOWN):
+			if (event.key == pygame.K_SPACE):
+				doing_jump = True
 
 		if (event.type == pygame.KEYDOWN):
 			if (event.key == pygame.K_a):
@@ -294,6 +294,7 @@ while keep_going:
 
 
 		if (time.time() < time_to_beer + 5):							#moving of Chekanov
+			chekanov[0].draw_front()
 			Game.timer(screen, (4 - int(time.time() - time_to_beer)))
 			if (move_left and move_right == False):
 				chekanov[0].move_right()
@@ -307,13 +308,14 @@ while keep_going:
 			elif (move_left == False):
 				chekanov[0].draw_front()
 
-			if(move_left and move_right):
-				chekanov[0].draw_front()
+			# if(move_left and move_right):
+			# 	chekanov[0].draw_front()
 
 			chekanov[0].update_points(True)
 			check_beer = chekanov[0].check_beer()
 
 		elif (check_beer == False):
+			chekanov[0].draw_front()
 			if (move_left and move_right == False):
 				chekanov[0].move_left()
 				chekanov[0].draw_left()
@@ -326,8 +328,8 @@ while keep_going:
 			elif (move_left == False):
 				chekanov[0].draw_front()
 
-			if(move_left and move_right):
-				chekanov[0].draw_front()
+			# if(move_left and move_right):
+			# 	chekanov[0].draw_front()
 
 			chekanov[0].update_points(False)
 			check_beer = chekanov[0].check_beer()
@@ -337,16 +339,17 @@ while keep_going:
 			check_beer = False
 
 
-		# if (doing_jump):
-		# 	if (to == 1):
-		# 		t = time.time() - 0.001
-		# 		to = 0
-		# 	chekanov[0].jump(t)
-		# 	if (chekanov[0].y < 640):
-		# 		doing_jump = True
-		# 	else:
-		# 		doing_jump = False
-		# 		to = 1
+		if (doing_jump):
+			if (to == 1):
+				# t = time.time() - 0.001
+				t = time.time()
+				to = 0
+			chekanov[0].jump(t)
+			if (chekanov[0].y < 640):
+				doing_jump = True
+			else:
+				doing_jump = False
+				to = 1
 
 
 		if (Chekanov.update_points(chekanov[0], False)):	#update points
